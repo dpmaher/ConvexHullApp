@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="../static/style.css">
+        <body onload="initialize_canvas()">
+        <h3 class="title">Click some points on the canvas!</h3>
+        <canvas id="myCanvas" width="700" height="350" style="border:1px solid #ffcc0f;"></canvas>
+        <div class="buttons">
+            <button id="form_hull">Form Convex Hull</button>
+        </div>
+    </body>
+    <script type="text/javascript" src="{{ url_for('static', filename='convexhull.js') }}">
+        initialize_canvas();
+    </script>
+</html>

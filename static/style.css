@@ -1,0 +1,35 @@
+#myCanvas {
+    display: block;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#form_hull {
+    background-color: #006699;
+    color: white;
+    font-size: 18px;
+    padding: 15px 32px;
+
+}
+
+.title {
+    font-family: courier;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px rgba(255, 51, 102, 0.80);
+}
+
+html {
+    height: 100%;
+}
+body {
+    background: linear-gradient(to bottom, #009999, #00ccff); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
