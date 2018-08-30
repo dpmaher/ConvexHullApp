@@ -12,7 +12,7 @@ function initialize_canvas() {
     ch = document.getElementById("form_hull");
      
     canvas.addEventListener("click", function (e) {
-        findxy("down", e);
+        drawpoint("down", e);
     }, false);
 
     ch.addEventListener("click", function (e) {
@@ -20,7 +20,7 @@ function initialize_canvas() {
     }, false);
 }
 
-function findxy(res, e) {
+function drawpoint(res, e) {
     if (res == "down") {
         var X = e.clientX - canvas.offsetLeft;
         var Y = e.clientY - canvas.offsetTop;
