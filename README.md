@@ -8,7 +8,9 @@ When the user clicks the "Form Convex Hull" button, the clicked points are then 
 
 # To Run Locally
 
-Python and Flask must be installed (follow these directions here if not installed: )
+Python 3 and Flask must be installed
+- Learn about/install Python here:https://www.python.org/
+- install flask using "pip install Flask"
 
 1. Pull repository
 2. Open the command line and navigate to the ConvexHullApp directory
