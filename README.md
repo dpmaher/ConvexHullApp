@@ -11,8 +11,10 @@ Python 3 and Flask must be installed
 - Learn about/install Python here:https://www.python.org/
 - install flask using "pip install Flask"
 
-1. Pull repository
+Instructions:
+1. Pull repository from github to local computer
 2. Open the command line and navigate to the ConvexHullApp directory
 3. Run the command "python server.py" to launch the Flask Server
 4. Open a web browser and type "localhost:5000" as the URL address
-5. Click points on canvas and press convex hulls
+5. Click points on HTML canvas and press "Form Convex Hull" button
+6. Click on HTML canvas again to clear points and start over
