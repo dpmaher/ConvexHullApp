@@ -9,7 +9,7 @@ When the user clicks the "Form Convex Hull" button, the clicked points are then 
 # To Run Locally
 Python 3 and Flask must be installed
 - Learn about/install Python here:https://www.python.org/
-- install flask using "pip install Flask"
+- install Flask using "pip install Flask"
 
 Instructions:
 1. Pull repository from github to local computer
