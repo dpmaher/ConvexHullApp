@@ -12,7 +12,7 @@ function initialize_canvas() {
     ch = document.getElementById("form_hull");
      
     canvas.addEventListener("click", function (e) {
-        drawpoint("down", e);
+        drawpoint(e);
     }, false);
 
     ch.addEventListener("click", function (e) {
@@ -20,26 +20,24 @@ function initialize_canvas() {
     }, false);
 }
 
-function drawpoint(res, e) {
-    if (res == "down") {
-        var X = e.clientX - canvas.offsetLeft;
-        var Y = e.clientY - canvas.offsetTop;
-        
-        if (hullMade == true)
-        {
-            clearCanvas();
-            hullMade = false;
-        }
-
-        ctx.beginPath();
-        ctx.arc(X,Y,wid,0,2 * Math.PI, false);
-        ctx.fillStyle = "blue";
-        ctx.fill();
-        ctx.closePath();
-
-        xpts.push(X);
-        ypts.push(Y);
+function drawpoint(e) {
+    var X = e.clientX - canvas.offsetLeft;
+    var Y = e.clientY - canvas.offsetTop;
+    
+    if (hullMade == true)
+    {
+        clearCanvas();
+        hullMade = false;
     }
+
+    ctx.beginPath();
+    ctx.arc(X,Y,wid,0,2 * Math.PI, false);
+    ctx.fillStyle = "blue";
+    ctx.fill();
+    ctx.closePath();
+
+    xpts.push(X);
+    ypts.push(Y);
 }
 
 function clearCanvas() {
@@ -59,8 +57,8 @@ function convexHull() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var hull = JSON.parse(this.responseText);
-            var chX = hull["X"];
-            var chY = hull["Y"];
+            var chX = hull.X;
+            var chY = hull.Y;
             var len = chX.length;
 
             for (var i = 1; i < len; i++) {
