@@ -8,10 +8,7 @@ app = Flask(__name__)
 def parse_points():
     js_data = request.get_json()
     hull = cg.compute_convexhull(cg.form_point_list(js_data["X"], js_data["Y"]))
-    X = [p.x for p in hull]
-    Y = [p.y for p in hull]
-    returnPts = json.dumps({ "X" : X, "Y" : Y})
-    return returnPts
+    return json.dumps({ "X" : [p.x for p in hull], "Y" : [p.y for p in hull]})
 
 @app.route('/')
 def index():
